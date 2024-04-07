@@ -1,0 +1,23 @@
+
+[
+    {"ID":"HOUSE0001", "hinhanh":"/images/nha1.jpg", "dientich": 1000, "diadiem":"Ho Chi Minh", "sophongngu": 4, "sophongtam": 4, "giaban": 1000000000},
+    {"ID":"HOUSE0002", "hinhanh":"/images/nha2.jpg", "dientich": 800, "diadiem": "Ha Noi", "sophongngu": 3, "sophongtam": 2, "giaban": 800000000},
+    {"ID":"HOUSE0003", "hinhanh":"/images/nha3.jpg", "dientich": 1200, "diadiem": "Da Nang", "sophongngu": 5, "sophongtam": 3, "giaban": 1500000000},
+    {"ID":"HOUSE0004", "hinhanh":"/images/nha4.jpg", "dientich": 600, "diadiem": "Ho Chi Minh", "sophongngu": 2, "sophongtam": 1, "giaban": 600000000},
+    {"ID":"HOUSE0005", "hinhanh":"/images/nha5.jpg", "dientich": 900, "diadiem": "Hai Phong", "sophongngu": 4, "sophongtam": 2, "giaban": 1200000000},
+    {"ID":"HOUSE0006", "hinhanh":"/images/nha6.jpg", "dientich": 700, "diadiem": "Can Tho", "sophongngu": 3, "sophongtam": 2, "giaban": 900000000},
+    {"ID":"HOUSE0007", "hinhanh":"/images/nha7.jpg", "dientich": 1000, "diadiem": "Quang Ninh", "sophongngu": 4, "sophongtam": 3, "giaban": 1300000000},
+    {"ID":"HOUSE0008", "hinhanh":"/images/nha8.jpg", "dientich": 850, "diadiem": "Vinh", "sophongngu": 3, "sophongtam": 2, "giaban": 850000000},
+    {"ID":"HOUSE0009", "hinhanh":"/images/nha9.jpg", "dientich": 1100, "diadiem": "Buon Ma Thuot", "sophongngu": 4, "sophongtam": 3, "giaban": 1100000000},
+    {"ID":"HOUSE0010", "hinhanh":"/images/nha10.jpg", "dientich": 950, "diadiem": "Nha Trang", "sophongngu": 3, "sophongtam": 2, "giaban": 950000000},
+    {"ID":"HOUSE0011", "hinhanh":"/images/nha11.jpg", "dientich": 1000, "diadiem":"Ha Noi", "sophongngu": 4, "sophongtam": 4, "giaban": 1000000000},
+    {"ID":"HOUSE0012", "hinhanh":"/images/nha12.jpg", "dientich": 1200, "diadiem":"Ho Chi Minh", "sophongngu": 3, "sophongtam": 3, "giaban": 1200000000},
+    {"ID":"HOUSE0013", "hinhanh":"/images/nha13.jpg", "dientich": 900, "diadiem":"Da Nang", "sophongngu": 2, "sophongtam": 2, "giaban": 900000000},
+    {"ID":"HOUSE0014", "hinhanh":"/images/nha14.jpg", "dientich": 1500, "diadiem":"Nha Trang", "sophongngu": 5, "sophongtam": 5, "giaban": 2500000000},
+    {"ID":"HOUSE0015", "hinhanh":"/images/nha15.jpg", "dientich": 800, "diadiem":"Can Tho", "sophongngu": 3, "sophongtam": 2, "giaban": 800000000},
+    {"ID":"HOUSE0016", "hinhanh":"/images/nha16.jpg", "dientich": 1100, "diadiem":"Hai Phong", "sophongngu": 4, "sophongtam": 3, "giaban": 1300000000},
+    {"ID":"HOUSE0017", "hinhanh":"/images/nha17.jpg", "dientich": 1300, "diadiem":"Vung Tau", "sophongngu": 3, "sophongtam": 3, "giaban": 1800000000},
+    {"ID":"HOUSE0018", "hinhanh":"/images/nha18.jpg", "dientich": 950, "diadiem":"Quang Ninh", "sophongngu": 4, "sophongtam": 2, "giaban": 1100000000},
+    {"ID":"HOUSE0019", "hinhanh":"/images/nha19.jpg", "dientich": 850, "diadiem":"Hue", "sophongngu": 2, "sophongtam": 1, "giaban": 750000000},
+    {"ID":"HOUSE0020", "hinhanh":"/images/nha20.jpg", "dientich": 1600, "diadiem":"Phu Quoc", "sophongngu": 5, "sophongtam": 4, "giaban": 2300000000}
+]

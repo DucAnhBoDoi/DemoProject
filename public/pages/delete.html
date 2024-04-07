@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Houses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin: 0 20px;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a,i {
+            color: #fff;
+            text-decoration: none;
+            /* Loại bỏ dấu gạch chân khi hover */
+            text-decoration-skip-ink: none;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+            /* Loại bỏ dấu gạch chân khi hover */
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px;
+        }
+
+        form {
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea,
+        form input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .fa-brands {
+            font-size: 50px;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="/">
+            <i class="fa-brands fa-unity"></i>
+        </a>
+        <h1>Delete Houses</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="create.html">Create Houses</a></li>
+            <li><a href="update.html">Update Houses</a></li>
+            <li><a href="delete.html">Delete Houses</a></li>
+
+        </ul>
+    </nav>
+
+    <section>
+        <!-- Form -->
+        <form id="deleteForm">
+            <label for="ID">ID:</label>
+            <input type="text" id="ID" name="ID" required>
+
+            <input type="submit" value="Delete Houses">
+        </form>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Are you sure you want to delete it?</p>
+            <button id="confirmDeleteBtn">Delete</button>
+            <button class="cancelBtn">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("deleteForm");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function (event) {
+            event.preventDefault(); // Prevent form submission
+            var ID = document.getElementById("ID").value;
+            if (ID.trim() !== "") { // Check if ID is not empty
+                modal.style.display = "block";
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle delete confirmation
+        document.getElementById("confirmDeleteBtn").addEventListener("click", function () {
+            var ID = document.getElementById("ID").value;
+            fetch(`/Houses/${ID}`, {
+                method: "DELETE",
+            })
+                .then(response => response.text())
+                .then(message => {
+                    alert(message);
+                    deleteForm.reset();
+                    modal.style.display = "none"; // Ẩn modal sau khi xóa thành công
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert('An error occurred while deleting the house')
+                });
+        });
+
+        // Handle cancel button
+        document.getElementsByClassName("cancelBtn")[0].addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
